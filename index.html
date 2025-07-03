@@ -1,0 +1,145 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookBarter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    .section {
+      display: none;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .active {
+      display: block;
+    }
+    h2 {
+      color: #4CAF50;
+    }
+    label, select, input {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+      padding: 8px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .buy-now {
+      display: block;
+      margin: 20px auto;
+      width: 200px;
+    }
+    nav {
+      background: #333;
+      padding: 1em;
+      text-align: left;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      margin: 0 40px 0 0;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 30px;
+    }
+    .formula-box {
+      background-color: #f9f9f9;
+      border: 1px dashed #ccc;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BookBarter</h1>
+    <p>Exchange old books for new ones -- Sustainably and Affordably</p>
+  </header>  <nav>
+    <button onclick="showSection('section1')">About</button>
+    <button onclick="showSection('section2')">Subscription</button>
+    <button onclick="showSection('section3')">Exchange Request</button>
+  </nav>  <div id="section1" class="section active">
+    <h2>📚 What is This App?</h2>
+    <p><strong>BookBarter</strong> is a book exchange platform designed to help people--especially students and families who cannot afford new books--get access to the books they need. It allows users to exchange old books for new ones rather than throwing them away. This promotes both affordability and sustainability by reducing waste and giving books a longer life.</p><h2>💡 Why is it Helpful?</h2>
+<p>After reading, many people find their books become useless. Instead of letting them collect dust or go to waste, users can submit those books for exchange. The app makes the process simple and fair. Users only pay the difference in value between the old and new books, based on verified conditions--not claimed ones. It saves money and encourages reuse.</p>
+
+<h2>🧮 How Does It Work?</h2>
+<p>Users submit a request to exchange their old book. Our team verifies the book's condition and then applies a depreciation formula to determine its current value. The new book is given based on this verified value--not on user input.</p>
+
+<h3>📏 Depreciation Formula</h3>
+<div class="formula-box">
+  <strong>Lifespan Depreciation:</strong><br>
+  (Age / Lifespan) × M.R.P.<br><br>
+  <strong>Quality Adjustment:</strong><br>
+  Max +10% / -10%<br><br>
+  <strong>Wear & Tear:</strong><br>
+  -15% for unreadable, -5% for partial damage<br><br>
+  <strong>Final Formula:</strong><br>
+  Value of New Book = (M.R.P. + 5%) – Verified Value of Old Book
+</div>
+
+  </div>  <div id="section2" class="section">
+    <h2>💳 Subscription Plans</h2>
+    <p><strong>Free Plan:</strong> Max 3 book exchanges per year. Depreciation applied as usual.</p>
+    <p><strong>Premium Plan (₹1000/year):</strong> Unlimited exchanges + extra 5% benefit during exchange.</p>
+    <p><em>Subscription is linked to your mobile number (SIM-based verification).</em></p>
+  </div>  <div id="section3" class="section">
+    <h2>📥 Book Exchange Request</h2>
+    <form>
+      <label>Enter the Name of Your Book:</label>
+      <input type="text" placeholder="Eg: Science Class 9" required /><label>Enter the Name of the Book You Want:</label>
+  <input type="text" placeholder="Eg: Science Class 10" required />
+
+  <button type="button">Submit Request</button>
+</form>
+<img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Buy Now Button" class="buy-now">
+
+  </div>  <footer>
+    <p><strong>Creators of BookBarter</strong></p>
+    <p>CEO: Krishna Modi</p>
+    <p>CFO: Mohammad Uzair</p>
+    <p>CMO: Khan Zen Rehman</p>
+  </footer>  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script></body>
+</html><script>const htmlString = '<a href="https://www.example.com">Visit Example</a>';
+const parser = new DOMParser();
+const doc = parser.parseFromString(htmlString, 'text/html');
+const url = doc.querySelector('a').href;
+
+console.log(url); // ✅ Outputs: https://www.example.com</script>
